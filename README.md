@@ -1,4 +1,23 @@
-# Gift List
+# Merkle Tree Gift List 🎁
+### Ethereum Developer Bootcamp Week 2 Project
+
+Hey there! 👋
+
+Blockchains have a storage problem. They require that nodes in the network store every value recorded in their shared database. 
+For ethereum this means all account balances, as well as every persistent variable on a smart contract. 
+When working with smart contracts we need to be careful how much data we are storing on the blockchain. 
+The less data we store, the cheaper it will be.
+
+The aim of project is to build an application which gives out gifts, but only to names on the nice list `niceList.json`. 
+The catch is that on the server you are only allowed to store one 32 byte value in the server memory. 
+This 32 byte value has to be enough for the server to be able to determine who is on the list.
+
+### Solution:
+The client is the prover. They are the ones trying to prove to the server that the name is in the list. 
+The server is the verifier. They are taking the client's proof and, using minimal information (the 32 byte merkle root), able to verify that the name sent from the client is actually in the list.
+
+
+## Getting started
 
 To get started with the repository, clone it and then run `npm install` in the top-level directory to install the depedencies.
 
